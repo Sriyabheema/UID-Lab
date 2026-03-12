@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login & Registration</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#EAF2F8;   /* Pale official blue */
+}
+
+h2{
+    text-align:center;
+    margin-top:20px;
+    color:#2C3E50;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+iframe{
+    width:420px;
+    height:480px;
+    border:0px;
+    margin:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Login and Registration Forms</h2>
+
+<div class="container">
+
+<!-- LOGIN -->
+<iframe srcdoc="<html><body style='font-family:Arial;background:#FFFFFF;'>
+<div style='border:2px solid #5D9CEC;width:360px;margin:20px auto;padding:20px;background:#FFFFFF;'>
+<h3 align=center style='color:#2C3E50;'>Login</h3>
+<table cellpadding='12'>
+<tr>
+<td>Username :</td>
+<td><input type=text style='width:170px;'></td>
+</tr>
+<tr>
+<td>Password :</td>
+<td><input type=password style='width:170px;'></td>
+</tr>
+<tr>
+<td colspan=2 align=center>
+<input type=submit value='LOGIN'
+style='width:200px;padding:6px;border:1px solid #5D9CEC;background:#5D9CEC;color:white;'>
+</td>
+</tr>
+</table>
+</div>
+</body></html>">
+</iframe>
+
+<!-- REGISTER -->
+<iframe srcdoc="<html><body style='font-family:Arial;background:#FFFFFF;'>
+<div style='border:2px solid #5D9CEC;width:380px;margin:20px auto;padding:20px;background:#FFFFFF;'>
+<h3 align=center style='color:#2C3E50;'>User Registration</h3>
+<table cellpadding='10'>
+
+<tr>
+<td>Full Name :</td>
+<td><input type=text style='width:170px;'></td>
+</tr>
+
+<tr>
+<td>Email :</td>
+<td><input type=email style='width:170px;'></td>
+</tr>
+
+<tr>
+<td>Phone :</td>
+<td><input type=text style='width:170px;'></td>
+</tr>
+
+<tr>
+<td>Password :</td>
+<td><input type=password style='width:170px;'></td>
+</tr>
+
+<tr>
+<td>Confirm Password :</td>
+<td><input type=password style='width:170px;'></td>
+</tr>
+
+<tr>
+<td colspan=2 align=center>
+<input type=submit value='Register'
+style='padding:6px;border:1px solid #5D9CEC;background:#5D9CEC;color:white;'>
+<input type=reset value='Reset'
+style='padding:6px;border:1px solid #CCCCCC;background:#F2F2F2;'>
+</td>
+</tr>
+
+</table>
+</div>
+</body></html>">
+</iframe>
+
+</div>
+
+</body>
+</html>

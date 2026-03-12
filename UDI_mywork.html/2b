@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semester 2 Syllabus</title>
+</head>
+
+<body>
+
+    <h1 align = "center">Semester 2 Syllabus</h1>
+
+    <br><br><br> <!-- Gap between heading and table -->
+
+    <table border="1" width="80%" align="center" cellpadding="15">
+        
+        <tr>
+            <td>
+                <h3>Subject 1</h3>
+                <p>Details here...</p>
+            </td>
+            <td>
+                <h3>Subject 2</h3>
+                <p>Details here...</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h3>Subject 3</h3>
+                <p>Details here...</p>
+            </td>
+            <td>
+                <h3>Subject 4</h3>
+                <p>Details here...</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h3>Subject 5</h3>
+                <p>Details here...</p>
+            </td>
+            <td>
+                <h3>Subject 6</h3>
+                <p>Details here...</p>
+            </td>
+        </tr>
+
+        <!-- Bottom long row -->
+        <tr>
+            <td colspan="2">
+                <h3>Subject 7</h3>
+                <p>Details here...</p>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

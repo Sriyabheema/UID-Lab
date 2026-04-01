@@ -1,0 +1,571 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>Amrita Login Page For Week-5C Task UID</title> 
+
+ 
+
+<style> 
+
+ 
+
+*{ 
+
+    margin:0; 
+
+    padding:0; 
+
+    box-sizing:border-box; 
+
+    font-family: 'Segoe UI', sans-serif; 
+
+} 
+
+ 
+
+body{ 
+
+    background:#f6f4f1; 
+
+} 
+
+ 
+
+/* HEADER */ 
+
+header{ 
+
+    width:100%; 
+
+    padding:28px; 
+
+    text-align:center; 
+
+    font-size:26px; 
+
+    font-weight:600; 
+
+    letter-spacing:3px; 
+
+    background:#2f2f3f; 
+
+    color:white; 
+
+} 
+
+ 
+
+/* CAMPUS NAV */ 
+
+nav{ 
+
+    display:flex; 
+
+    justify-content:center; 
+
+    flex-wrap:wrap; 
+
+    gap:12px; 
+
+    padding:25px 10px; 
+
+} 
+
+ 
+
+nav a{ 
+
+    text-decoration:none; 
+
+    padding:8px 20px; 
+
+    border-radius:30px; 
+
+    background:#e8e6ff; 
+
+    color:#2f2f3f; 
+
+    font-size:14px; 
+
+    transition:0.3s; 
+
+} 
+
+ 
+
+nav a:hover{ 
+
+    background:#cfcafc; 
+
+    transform:translateY(-2px); 
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08); 
+
+} 
+
+ 
+
+/* MAIN LAYOUT */ 
+
+.container{ 
+
+    width:90%; 
+
+    margin:auto; 
+
+    display:flex; 
+
+    gap:40px; 
+
+    padding-bottom:50px; 
+
+} 
+
+ 
+
+/* LOGIN BOX */ 
+
+.login-box{ 
+
+    width:360px; 
+
+    background:white; 
+
+    padding:40px; 
+
+    border-radius:20px; 
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.08); 
+
+} 
+
+ 
+
+.login-box h2{ 
+
+    margin-bottom:25px; 
+
+    font-weight:600; 
+
+    color:#2f2f3f; 
+
+} 
+
+ 
+
+.login-box input{ 
+
+    width:100%; 
+
+    padding:13px; 
+
+    margin:10px 0; 
+
+    border:1px solid #e0e0e0; 
+
+    border-radius:12px; 
+
+    font-size:14px; 
+
+} 
+
+ 
+
+.login-box input:focus{ 
+
+    outline:none; 
+
+    border-color:#b8b4ff; 
+
+} 
+
+ 
+
+.options{ 
+
+    display:flex; 
+
+    justify-content:space-between; 
+
+    font-size:13px; 
+
+    margin-top:8px; 
+
+    color:#666; 
+
+} 
+
+ 
+
+.options a{ 
+
+    text-decoration:none; 
+
+    color:#6c63ff; 
+
+} 
+
+ 
+
+.options a:hover{ 
+
+    text-decoration:underline; 
+
+} 
+
+ 
+
+.login-btn{ 
+
+    width:100%; 
+
+    padding:13px; 
+
+    margin-top:18px; 
+
+    border:none; 
+
+    border-radius:12px; 
+
+    background:#6c63ff; 
+
+    color:white; 
+
+    font-weight:600; 
+
+    cursor:pointer; 
+
+    transition:0.3s; 
+
+} 
+
+ 
+
+.login-btn:hover{ 
+
+    background:#5146e5; 
+
+} 
+
+ 
+
+.divider{ 
+
+    text-align:center; 
+
+    margin:25px 0; 
+
+    color:#bbb; 
+
+    font-size:13px; 
+
+} 
+
+ 
+
+.signup-btn{ 
+
+    width:100%; 
+
+    padding:13px; 
+
+    border-radius:12px; 
+
+    border:2px solid #6c63ff; 
+
+    background:transparent; 
+
+    color:#6c63ff; 
+
+    font-weight:600; 
+
+    cursor:pointer; 
+
+    transition:0.3s; 
+
+} 
+
+ 
+
+.signup-btn:hover{ 
+
+    background:#6c63ff; 
+
+    color:white; 
+
+} 
+
+ 
+
+/* DETAILS SECTION */ 
+
+.details{ 
+
+    flex:1; 
+
+    background:white; 
+
+    padding:45px; 
+
+    border-radius:20px; 
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.08); 
+
+} 
+
+ 
+
+.details h3{ 
+
+    color:#2f2f3f; 
+
+    margin-bottom:15px; 
+
+} 
+
+ 
+
+.details p{ 
+
+    color:#555; 
+
+    line-height:1.6; 
+
+} 
+
+ 
+
+.campus{ 
+
+    display:none; 
+
+} 
+
+ 
+
+#amaravati:target, 
+
+#amritapuri:target, 
+
+#bengaluru:target, 
+
+#chennai:target, 
+
+#coimbatore:target, 
+
+#faridabad:target, 
+
+#kochi:target, 
+
+#mysuru:target{ 
+
+    display:block; 
+
+} 
+
+ 
+
+.default{ 
+
+    display:block; 
+
+} 
+
+ 
+
+</style> 
+
+</head> 
+
+ 
+
+<body> 
+
+ 
+
+<header> 
+
+AMRITA VISHWA VIDYAPEETHAM 
+
+</header> 
+
+ 
+
+<nav> 
+
+<a href="#amaravati">Amaravati</a> 
+
+<a href="#amritapuri">Amritapuri</a> 
+
+<a href="#bengaluru">Bengaluru</a> 
+
+<a href="#chennai">Chennai</a> 
+
+<a href="#coimbatore">Coimbatore</a> 
+
+<a href="#faridabad">Faridabad</a> 
+
+<a href="#kochi">Kochi</a> 
+
+<a href="#mysuru">Mysuru</a> 
+
+</nav> 
+
+ 
+
+<div class="container"> 
+
+ 
+
+<!-- LOGIN --> 
+
+<div class="login-box"> 
+
+<h2>Student Login</h2> 
+
+ 
+
+<input type="email" placeholder="University Email"> 
+
+<input type="password" placeholder="Password"> 
+
+ 
+
+<div class="options"> 
+
+<label><input type="checkbox"> Remember me</label> 
+
+<a href="#">Forgot Password?</a> 
+
+</div> 
+
+ 
+
+<button class="login-btn">Login</button> 
+
+ 
+
+<div class="divider">or</div> 
+
+ 
+
+<button class="signup-btn">Create New Account</button> 
+
+</div> 
+
+ 
+
+<!-- DETAILS --> 
+
+<div class="details"> 
+
+ 
+
+<div class="default"> 
+
+<h3>Welcome to Amrita</h3> 
+
+<p>Select a campus above to know more in detailed.</p> 
+
+</div> 
+
+ 
+
+<div id="amaravati" class="campus"> 
+
+<h3>Amaravati Campus</h3> 
+
+<p>Amrita Vishwa Vidyapeetham is a leading multi-disciplinary and research-intensive university, establishing its campus in Amaravati. Nestled amidst the scenic beauty of the Krishna River and surrounded by natural wonders and historical sites, Amaravati city embodies the principles of sustainability and liveability.  We are building one of the most buoyant centre of the research, education and technological advancement, in the all new greenfield capital city. 
+
+ 
+
+Our institution boasts a sprawling 100-acre campus adorned with green lawns and thriving trees. Conveniently connected by road, rail, and air, it is easily accessible from the IT and business hubs of Andhra Pradesh and Telangana.Located near the Krishna River with strong focus on engineering and research excellence.</p> 
+
+</div> 
+
+ 
+
+<div id="amritapuri" class="campus"> 
+
+<h3>Amritapuri Campus</h3> 
+
+<p>Situated in the serene village of Vallikavu, our campus exudes a sense of warmth and tranquility, creating the perfect environment for intellectual growth and personal development. Our educational institution encompasses six prestigious schools and more than 20 research centres, catering to students passionate about various disciplines such as arts, business, humanities, natural sciences, and social sciences. With a sprawling 80-acre expanse of land, our campus provides ample space for learning, exploration, and recreation. The million square feet of built-up area includes state-of-the-art academic blocks, comfortable student hostels, and a range of modern amenities to enhance the overall campus experience.</p> 
+
+</div> 
+
+ 
+
+<div id="bengaluru" class="campus"> 
+
+<h3>Bengaluru Campus</h3> 
+
+<p>Nestled in the heart of Bengaluru, a thriving center for research, education, and technological advancement, stands a dynamic institution at the forefront of the tech city. The 50 acres’ campus, featuring green laws and the burgeoning trees, is well connected by road, rail and air. The campus offers MBA, B. Tech. programs in five disciplines and M. Tech. programs in six disciplines. The school seeks to prepare graduates with a solution-mindset and with a high degree of ethical standards. Departments are equipped with modern laboratories, design tools and software packages. vision to produce quality engineers with an attitude of service, for the benefit of the society and nation.</p> 
+
+</div> 
+
+ 
+
+<div id="chennai" class="campus"> 
+
+<h3>Chennai Campus</h3> 
+
+<p>Amrita Vishwa Vidyapeetham, one of India’s premier multi-disciplinary institutions, extends its legacy to the Chennai campus, fostering academic excellence, research, and industry collaboration.Strong academics with research and interdisciplinary programs.</p> 
+
+</div> 
+
+ 
+
+<div id="coimbatore" class="campus"> 
+
+<h3>Coimbatore Campus</h3> 
+
+<p>The beginnings of Amrita Vishwa Vidyapeetham, one of the top ranked deemed university, can be traced back to 1994 when a School of Engineering was established in an obscure village named Ettimadai, situated at the foothills of the Bouluvanpatty ranges of the Western Ghats in the Coimbatore district of Tamil Nadu. Main engineering campus with advanced labs and placement excellence.</p> 
+
+</div> 
+
+ 
+
+<div id="faridabad" class="campus"> 
+
+<h3>Faridabad Campus</h3> 
+
+<p>A land that has witnessed the historical prominence of ultra-modern facilities in India. A place where science, technology, and research merge to embrace good health across a 130-acre sprawling health city campus. India’s largest multi-specialty hospital and home to Amrita University’s 8th campus, Amrita Vishwa Vidyapeetham Delhi NCR health science campus will offer undergraduate and postgraduate programs in Medicine, Artificial Intelligence & Data Sciences, Nursing, Public Health, Hospital Administration and Allied health sciences.North India campus offering multidisciplinary academic programs.</p> 
+
+</div> 
+
+ 
+
+<div id="kochi" class="campus"> 
+
+<h3>Kochi Campus</h3> 
+
+<p>The expansive and serene Brahmasthanam Temple Complex at Edappally, Kochi, by the NH-17 is home to Amrita Vishwa Vidyapeetham, Kochi, which is candidly achieving fame and glory. The University founded by the well-known humanitarian, Sadguru Sri Mata Amritanandamayi Devi, offers academic education rooted in Indian cultural history.Focused on medical sciences and healthcare education.</p> 
+
+</div> 
+
+ 
+
+<div id="mysuru" class="campus"> 
+
+<h3>Mysuru Campus</h3> 
+
+<p>Located in the heritage city of Mysuru, the campus offers a focused academic environment supported by the academic framework, research ecosystem, and institutional standards of Amrita University. Modern campus with expanding research and academic infrastructure.</p> 
+
+</div> 
+
+ 
+
+</div> 
+
+ 
+
+</div> 
+
+ 
+
+</body> 
+
+</html> 

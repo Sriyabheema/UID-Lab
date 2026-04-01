@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>E-Commerce Mini Website</title>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:#f4f7f4;
+}
+
+/* HEADER */
+
+.header{
+background:#7a9c7a;
+color:white;
+text-align:center;
+padding:22px;
+font-size:26px;
+font-weight:600;
+}
+
+/* SALE BAR */
+
+.sale{
+background:#cfdccf;
+color:#2f3b2f;
+text-align:center;
+padding:10px;
+font-weight:600;
+}
+
+/* MAIN LAYOUT */
+
+.main{
+display:flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:230px;
+background:#e7efe7;
+padding:20px;
+}
+
+.sidebar h3{
+margin-top:0;
+color:#2f3b2f;
+}
+
+.sidebar label{
+display:block;
+margin:12px 0;
+cursor:pointer;
+text-decoration:none;
+color:#2f3b2f;
+font-weight:500;
+padding:8px 10px;
+border-radius:6px;
+transition:0.2s;
+}
+
+.sidebar label:hover{
+background:#d8e6d8;
+}
+
+/* PRODUCTS AREA */
+
+.products{
+flex:1;
+padding:30px;
+}
+
+/* PRODUCT GRID */
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:20px;
+}
+
+/* PRODUCT CARD */
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.card img{
+width:100%;
+height:170px;
+object-fit:cover;
+}
+
+.card h4{
+margin:10px;
+color:#2f3b2f;
+}
+
+/* BUTTON */
+
+.card button{
+margin-bottom:15px;
+padding:10px 14px;
+background:#8faa8f;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+font-weight:600;
+transition:0.15s;
+}
+
+.card button:active{
+transform:translateY(3px);
+background:#6f8f6f;
+}
+
+/* FOOTER */
+
+.footer{
+background:#7a9c7a;
+color:white;
+margin-top:40px;
+padding:30px 20px;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+max-width:1200px;
+margin:auto;
+}
+
+.footer-section{
+width:250px;
+margin:10px 0;
+}
+
+.footer-section h3{
+margin-bottom:10px;
+}
+
+.footer-section ul{
+list-style:none;
+padding:0;
+}
+
+.footer-section li{
+margin:6px 0;
+}
+
+.footer-section a{
+text-decoration:none;
+color:white;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:20px;
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width:1000px){
+
+.product-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+@media screen and (max-width:700px){
+
+.main{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+}
+
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.footer-container{
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+}
+
+/* RADIO BUTTON FILTER */
+
+input[type="radio"]{
+display:none;
+}
+
+#clothing:checked ~ .main .footwear,
+#clothing:checked ~ .main .books,
+#clothing:checked ~ .main .appliances{
+display:none;
+}
+
+#footwear:checked ~ .main .clothing,
+#footwear:checked ~ .main .books,
+#footwear:checked ~ .main .appliances{
+display:none;
+}
+
+#books:checked ~ .main .clothing,
+#books:checked ~ .main .footwear,
+#books:checked ~ .main .appliances{
+display:none;
+}
+
+#appliances:checked ~ .main .clothing,
+#appliances:checked ~ .main .footwear,
+#appliances:checked ~ .main .books{
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<input type="radio" name="filter" id="all" checked>
+<input type="radio" name="filter" id="clothing">
+<input type="radio" name="filter" id="footwear">
+<input type="radio" name="filter" id="books">
+<input type="radio" name="filter" id="appliances">
+
+<div class="header">
+E-Commerce Website
+</div>
+
+<div class="sale">
+UP TO 50% SALE!!!
+</div>
+
+<div class="main">
+
+<div class="sidebar">
+
+<h3>Categories</h3>
+
+<label for="all">All</label>
+<label for="clothing">Clothing</label>
+<label for="footwear">Footwear</label>
+<label for="books">Books</label>
+<label for="appliances">Home Appliances</label>
+
+</div>
+
+<div class="products">
+
+<div class="category clothing">
+
+<h2>Clothing</h2>
+
+<div class="product-grid">
+
+<div class="card">
+<img src="panda.webp">
+<h4>T-Shirt</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="leather.webp">
+<h4>Jacket</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="jeans.webp">
+<h4>Jeans</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="dress.webp">
+<h4>Dress</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="hoddie.avif">
+<h4>Hoodie</h4>
+<button>Add to Cart</button>
+</div>
+
+</div>
+</div>
+
+<div class="category footwear">
+
+<h2>Footwear</h2>
+
+<div class="product-grid">
+
+<div class="card">
+<img src="puma.avif">
+<h4>Sneakers</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="run.jpg">
+<h4>Running Shoes</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="sandals.jpg">
+<h4>Sandals</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="boots.webp">
+<h4>Boots</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="heels.jpg">
+<h4>Heels</h4>
+<button>Add to Cart</button>
+</div>
+
+</div>
+</div>
+
+<div class="category books">
+
+<h2>Books</h2>
+
+<div class="product-grid">
+
+<div class="card">
+<img src="harry.jpg">
+<h4>Novel</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="sci.jpg">
+<h4>Science Book</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="his.webp">
+<h4>History Book</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="prog.jpg">
+<h4>Programming</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="math.webp">
+<h4>Math Book</h4>
+<button>Add to Cart</button>
+</div>
+
+</div>
+</div>
+
+<div class="category appliances">
+
+<h2>Home Appliances</h2>
+
+<div class="product-grid">
+
+<div class="card">
+<img src="microwave.jpg">
+<h4>Microwave</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="fridge.avif">
+<h4>Refrigerator</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="washing - Copy.avif">
+<h4>Washing Machine</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="air.jpg">
+<h4>Air Fryer</h4>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="vaccum.webp">
+<h4>Vacuum Cleaner</h4>
+<button>Add to Cart</button>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-section">
+<h3>E-Commerce</h3>
+<p>Your one stop shop for clothing, books, and appliances.</p>
+</div>
+
+<div class="footer-section">
+<h3>Quick Links</h3>
+<ul>
+<li>Clothing</li>
+<li>Footwear</li>
+<li>Books</li>
+<li>Appliances</li>
+</ul>
+</div>
+
+<div class="footer-section">
+<h3>Contact</h3>
+<p>Email:E-commerce@shop.com</p>
+<p>Phone: +91 99999 01010</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 E-Commerce Website
+</div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Moving Ball Animation</title>
+
+<style>
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#F3F0FF;
+}
+
+/* ball */
+.ball{
+width:100px;
+height:100px;
+background:#A8E6CF; 
+border-radius:50%;
+animation:moveBall 1.5s infinite alternate;
+}
+
+/* animation */
+@keyframes moveBall{
+
+from{
+transform:translateY(0px);
+}
+
+to{
+transform:translateY(-150px);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="ball"></div>
+
+</body>
+</html>

@@ -1,1 +1,133 @@
+<!DOCTYPE html> 
 
+<html> 
+
+ 
+
+<head> 
+
+ 
+
+<title>Email Validation</title> 
+
+ 
+
+<style> 
+
+ 
+
+#error 
+
+{ 
+
+color:red; 
+
+font-size:14px; 
+
+} 
+
+ 
+
+</style> 
+
+ 
+
+</head> 
+
+ 
+
+<body> 
+
+ 
+
+<h2>Registration Form</h2> 
+
+ 
+
+<form id="regForm"> 
+
+ 
+
+<label>Email:</label> 
+
+ 
+
+<input type="text" id="email" placeholder="Enter email"> 
+
+ 
+
+<p id="error"></p> 
+
+ 
+
+<button type="submit">Submit</button> 
+
+ 
+
+</form> 
+
+ 
+
+<script> 
+
+ 
+
+const form = document.getElementById("regForm"); 
+
+ 
+
+const email = document.getElementById("email"); 
+
+ 
+
+const error = document.getElementById("error"); 
+
+ 
+
+form.addEventListener("submit", function(event) 
+
+{ 
+
+ 
+
+const pattern = /[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/; 
+
+ 
+
+if(!pattern.test(email.value)) 
+
+{ 
+
+error.textContent = "Invalid email format"; 
+
+ 
+
+event.preventDefault(); 
+
+} 
+
+ 
+
+else 
+
+{ 
+
+error.textContent = ""; 
+
+} 
+
+ 
+
+}); 
+
+ 
+
+</script> 
+
+ 
+
+</body> 
+
+ 
+
+</html> 

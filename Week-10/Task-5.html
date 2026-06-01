@@ -1,1 +1,139 @@
+<!DOCTYPE html> 
 
+<html> 
+
+<head> 
+
+<title>Grade Calculator</title> 
+
+</head> 
+
+ 
+
+<body style="text-align:center; font-family:Arial; margin-top:50px;"> 
+
+ 
+
+<h2>Grade Calculator</h2> 
+
+ 
+
+<input type="number" id="m1" placeholder="Subject 1"><br><br> 
+
+<input type="number" id="m2" placeholder="Subject 2"><br><br> 
+
+<input type="number" id="m3" placeholder="Subject 3"><br><br> 
+
+<input type="number" id="m4" placeholder="Subject 4"><br><br> 
+
+<input type="number" id="m5" placeholder="Subject 5"><br><br> 
+
+<input type="number" id="m6" placeholder="Subject 6"><br><br> 
+
+ 
+
+<button onclick="calculate()">Calculate</button> 
+
+ 
+
+<h3 id="result"></h3> 
+
+ 
+
+<script> 
+
+ 
+
+function calculate() 
+
+{ 
+
+let m1 = parseFloat(document.getElementById("m1").value); 
+
+let m2 = parseFloat(document.getElementById("m2").value); 
+
+let m3 = parseFloat(document.getElementById("m3").value); 
+
+let m4 = parseFloat(document.getElementById("m4").value); 
+
+let m5 = parseFloat(document.getElementById("m5").value); 
+
+let m6 = parseFloat(document.getElementById("m6").value); 
+
+ 
+
+let avg = (m1 + m2 + m3 + m4 + m5 + m6) / 6; 
+
+ 
+
+let grade; 
+
+ 
+
+if (avg < 60) 
+
+{ 
+
+grade = "F"; 
+
+} 
+
+else if (avg < 70) 
+
+{ 
+
+grade = "D"; 
+
+} 
+
+else if (avg < 80) 
+
+{ 
+
+grade = "C"; 
+
+} 
+
+else if (avg < 90) 
+
+{ 
+
+grade = "B"; 
+
+} 
+
+else if (avg < 100) 
+
+{ 
+
+grade = "A"; 
+
+} 
+
+else 
+
+{ 
+
+grade = "Invalid Marks"; 
+
+} 
+
+ 
+
+document.getElementById("result").innerHTML = 
+
+"Average = " + avg.toFixed(2) + "<br>Grade = " + grade; 
+
+} 
+
+ 
+
+</script> 
+
+ 
+
+</body> 
+
+</html> 
+
+ 

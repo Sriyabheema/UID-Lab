@@ -1,1 +1,109 @@
+<!DOCTYPE html> 
 
+<html> 
+
+ 
+
+<head> 
+
+ 
+
+<title>Mobile Number Validation</title> 
+
+ 
+
+<style> 
+
+ 
+
+#error 
+
+{ 
+
+color:red; 
+
+font-size:14px; 
+
+} 
+
+ 
+
+</style> 
+
+ 
+
+</head> 
+
+ 
+
+<body> 
+
+ 
+
+<h2>Enter Mobile Number</h2> 
+
+ 
+
+<input type="text" id="mobile" placeholder="Enter 10-digit mobile number"> 
+
+ 
+
+<p id="error"></p> 
+
+ 
+
+<script> 
+
+ 
+
+const mobileInput = document.getElementById("mobile"); 
+
+ 
+
+const error = document.getElementById("error"); 
+
+ 
+
+mobileInput.addEventListener("blur", function() 
+
+{ 
+
+ 
+
+const pattern = /^[0-9]{10}$/; 
+
+ 
+
+if(!pattern.test(mobileInput.value)) 
+
+{ 
+
+error.textContent = "Mobile number must be exactly 10 digits"; 
+
+} 
+
+ 
+
+else 
+
+{ 
+
+error.textContent = ""; 
+
+} 
+
+ 
+
+}); 
+
+ 
+
+</script> 
+
+ 
+
+</body> 
+
+ 
+
+</html> 

@@ -1,1 +1,211 @@
+<!DOCTYPE html> 
 
+<html> 
+
+ 
+
+<head> 
+
+ 
+
+<title>Registration Form Validation</title> 
+
+ 
+
+<style> 
+
+ 
+
+.error 
+
+{ 
+
+color:red; 
+
+font-size:14px; 
+
+} 
+
+ 
+
+</style> 
+
+ 
+
+</head> 
+
+ 
+
+<body> 
+
+ 
+
+<h2>Registration Form</h2> 
+
+ 
+
+<form id="regForm"> 
+
+ 
+
+<label>Name:</label><br> 
+
+ 
+
+<input type="text" id="name"><br> 
+
+ 
+
+<p id="nameError" class="error"></p> 
+
+ 
+
+<label>Email:</label><br> 
+
+ 
+
+<input type="text" id="email"><br> 
+
+ 
+
+<p id="emailError" class="error"></p> 
+
+ 
+
+<label>Password:</label><br> 
+
+ 
+
+<input type="password" id="password"><br> 
+
+ 
+
+<p id="passError" class="error"></p> 
+
+ 
+
+<button type="submit">Register</button> 
+
+ 
+
+</form> 
+
+ 
+
+<script> 
+
+ 
+
+const form = document.getElementById("regForm"); 
+
+ 
+
+form.addEventListener("submit", function(event) 
+
+{ 
+
+ 
+
+let valid = true; 
+
+ 
+
+const name = document.getElementById("name").value.trim(); 
+
+ 
+
+const email = document.getElementById("email").value.trim(); 
+
+ 
+
+const password = document.getElementById("password").value.trim(); 
+
+ 
+
+const nameError = document.getElementById("nameError"); 
+
+ 
+
+const emailError = document.getElementById("emailError"); 
+
+ 
+
+const passError = document.getElementById("passError"); 
+
+ 
+
+nameError.textContent = ""; 
+
+ 
+
+emailError.textContent = ""; 
+
+ 
+
+passError.textContent = ""; 
+
+ 
+
+if(name === "") 
+
+{ 
+
+nameError.textContent = "Name cannot be empty"; 
+
+valid = false; 
+
+} 
+
+ 
+
+const emailPattern = /[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/; 
+
+ 
+
+if(!emailPattern.test(email)) 
+
+{ 
+
+emailError.textContent = "Enter a valid email"; 
+
+valid = false; 
+
+} 
+
+ 
+
+if(password.length < 6) 
+
+{ 
+
+passError.textContent = "Password must be at least 6 characters"; 
+
+valid = false; 
+
+} 
+
+ 
+
+if(!valid) 
+
+{ 
+
+event.preventDefault(); 
+
+} 
+
+ 
+
+}); 
+
+ 
+
+</script> 
+
+ 
+
+</body> 
+
+ 
+
+</html> 

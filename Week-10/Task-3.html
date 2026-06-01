@@ -1,1 +1,117 @@
+<!DOCTYPE html> 
 
+<html> 
+
+<head> 
+
+<title>Largest of Five Numbers</title> 
+
+</head> 
+
+ 
+
+<body style="text-align:center; font-family:Arial; margin-top:50px;"> 
+
+ 
+
+<h2>Find Largest of Five Numbers</h2> 
+
+ 
+
+<input type="number" id="n1" placeholder="Enter first number"><br><br> 
+
+<input type="number" id="n2" placeholder="Enter second number"><br><br> 
+
+<input type="number" id="n3" placeholder="Enter third number"><br><br> 
+
+<input type="number" id="n4" placeholder="Enter fourth number"><br><br> 
+
+<input type="number" id="n5" placeholder="Enter fifth number"><br><br> 
+
+ 
+
+<button onclick="findLargest()">Find Largest</button> 
+
+ 
+
+<script> 
+
+ 
+
+function findLargest() 
+
+{ 
+
+let a = parseFloat(document.getElementById("n1").value); 
+
+let b = parseFloat(document.getElementById("n2").value); 
+
+let c = parseFloat(document.getElementById("n3").value); 
+
+let d = parseFloat(document.getElementById("n4").value); 
+
+let e = parseFloat(document.getElementById("n5").value); 
+
+ 
+
+let largest; 
+
+ 
+
+if (a >= b && a >= c && a >= d && a >= e) 
+
+{ 
+
+largest = a; 
+
+} 
+
+else if (b >= a && b >= c && b >= d && b >= e) 
+
+{ 
+
+largest = b; 
+
+} 
+
+else if (c >= a && c >= b && c >= d && c >= e) 
+
+{ 
+
+largest = c; 
+
+} 
+
+else if (d >= a && d >= b && d >= c && d >= e) 
+
+{ 
+
+largest = d; 
+
+} 
+
+else 
+
+{ 
+
+largest = e; 
+
+} 
+
+ 
+
+alert("The largest number is: " + largest); 
+
+} 
+
+ 
+
+</script> 
+
+ 
+
+</body> 
+
+</html> 
+
+ 

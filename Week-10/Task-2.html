@@ -1,1 +1,101 @@
+<!DOCTYPE html> 
 
+<html> 
+
+<head> 
+
+<title>Sort Three Numbers</title> 
+
+</head> 
+
+ 
+
+<body> 
+
+ 
+
+<script> 
+
+ 
+
+function sortNumbers(a, b, c) 
+
+{ 
+
+let result; 
+
+ 
+
+if (a >= b && a >= c) 
+
+{ 
+
+if (b >= c) 
+
+result = a + ", " + b + ", " + c; 
+
+else 
+
+result = a + ", " + c + ", " + b; 
+
+} 
+
+ 
+
+else if (b >= a && b >= c) 
+
+{ 
+
+if (a >= c) 
+
+result = b + ", " + a + ", " + c; 
+
+else 
+
+result = b + ", " + c + ", " + a; 
+
+} 
+
+ 
+
+else 
+
+{ 
+
+if (a >= b) 
+
+result = c + ", " + a + ", " + b; 
+
+else 
+
+result = c + ", " + b + ", " + a; 
+
+} 
+
+ 
+
+alert("Sorted numbers (Descending): " + result); 
+
+} 
+
+ 
+
+let x = 0; 
+
+let y = -1; 
+
+let z = 4; 
+
+ 
+
+sortNumbers(x, y, z); 
+
+ 
+
+</script> 
+
+ 
+
+</body> 
+
+</html> 
